@@ -1,0 +1,39 @@
+# INSTALL ZSH
+sudo apt install zsh
+
+# INSTALL oh-my-zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+# INSTALL powerline fonts
+#can copy from font collections
+# clone
+git clone https://github.com/powerline/fonts.git
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+
+## INSTALL AWESOME FONTS
+
+#clone
+git clone https://github.com/gabrielelana/awesome-terminal-fonts.git
+#installgit clone https://github.com/powerline/fonts.git
+cd awesome-terminal-fonts
+sh ./install.sh
+
+# INSTALL powerlevel9k
+git clone https://github.com/bhilburn/powerlevel9k.git
+cp -r powerlevel9k ~/.oh-my-zsh/themes
+
+# SET powerlevel9k as zsh Theme
+nano .zshrc
+
+## INSTALL colorls
+sudo apt install ruby libncurses5-dev
+sudo gem update --system
+sudo gem install rake colorls
+# set alias
+set alias in ~/.zshrc
+alias ls="colorls --sort-file --dark-file"
