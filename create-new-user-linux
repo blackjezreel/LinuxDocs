@@ -1,0 +1,10 @@
+Login to root
+if you are in user name, go to tty ctrl+al+F3 then login as root
+
+killall -u old
+id old
+usermod -l new old
+groupmod -n new old
+usermod -d /home/new -m new
+usermod -c “New Real Name” new
+id new
