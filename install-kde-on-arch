@@ -1,0 +1,9 @@
+install kde on arch
+
+#kde plasma minimal
+
+sudo pacman -S plasma-desktop dolphin kate konsole qt5-imageformats qt5-webengine khtml ffmpegthumbs kdegraphics-thumbnailers
+
+
+#kde plasma full
+sudo pacman -S plasma-meta
